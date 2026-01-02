@@ -1,2 +1,2 @@
-import Root from "./src/app/Root";
+import Root from "@/app/Root";
 export default Root;

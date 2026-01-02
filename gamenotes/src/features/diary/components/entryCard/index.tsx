@@ -1,9 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
-import type { Entry } from "../model/entry.types";
+import { Text, View } from "react-native";
+import type { Entry } from "../../model/entry.types";
+import { styles } from "./styles";
 
-type Props = {
-  entry: Entry;
-};
+type Props = { entry: Entry };
 
 export default function EntryCard({ entry }: Props) {
   return (
@@ -22,11 +21,3 @@ export default function EntryCard({ entry }: Props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  card: { borderWidth: 1, borderColor: "#eee", borderRadius: 10, padding: 12, gap: 8 },
-  title: { fontSize: 16, fontWeight: "700" },
-  meta: { opacity: 0.7 },
-  body: { fontSize: 14, opacity: 0.85 },
-  bodyEmpty: { fontSize: 14, opacity: 0.55, fontStyle: "italic" },
-});

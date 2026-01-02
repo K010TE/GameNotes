@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "gamenotes",
+    "name": "Gamenotes",
     "slug": "gamenotes",
+    "scheme": "gamenotes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
