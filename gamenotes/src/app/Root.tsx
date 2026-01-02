@@ -1,5 +1,0 @@
-import DiaryScreen from "../features/diary/screens/diaryScreen";
-
-export default function Root() {
-    return <DiaryScreen />;
-}
