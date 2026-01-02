@@ -16,8 +16,10 @@ GameNotes é um aplicativo React Native desenvolvido com Expo que permite aos us
 
 - **React Native** (0.81.5) - Framework para desenvolvimento mobile
 - **Expo** (~54.0.30) - Plataforma para desenvolvimento React Native
+- **Expo Router** (~6.0.21) - Navegação file-based para Expo
 - **TypeScript** (5.9.2) - Tipagem estática
 - **React** (19.1.0) - Biblioteca JavaScript para interfaces
+- **React Native Safe Area Context** (~5.6.0) - Área segura para dispositivos
 
 ## 📋 Pré-requisitos
 
@@ -55,27 +57,32 @@ Antes de começar, você precisa ter instalado:
 
 ```
 gamenotes/
+├── app/                          # Rotas do Expo Router
+│   ├── _layout.tsx              # Layout raiz da navegação
+│   └── index.tsx                # Tela inicial (rota /)
 ├── src/
-│   ├── app/
-│   │   └── Root.tsx              # Componente raiz da aplicação
 │   ├── features/
 │   │   └── diary/
 │   │       ├── components/
-│   │       │   └── EntryModal.tsx    # Modal para criar/editar registros
+│   │       │   ├── entryCard/   # Card de registro
+│   │       │   │   ├── index.tsx
+│   │       │   │   └── styles.ts
+│   │       │   └── entryModal/  # Modal para criar/editar
+│   │       │       ├── index.tsx
+│   │       │       └── styles.ts
 │   │       ├── model/
-│   │       │   └── entry.types.ts    # Tipos TypeScript para entradas
+│   │       │   └── entry.types.ts    # Tipos TypeScript
 │   │       └── screens/
-│   │           └── DiaryScreen.tsx   # Tela principal do diário
-│   ├── infra/
-│   │   └── storage/              # Infraestrutura de armazenamento
-│   └── shared/
-│       ├── components/           # Componentes compartilhados
-│       ├── ui/                   # Componentes de UI
-│       └── utils/                # Utilitários
+│   │           └── diaryScreen/      # Tela principal do diário
+│   │               ├── index.tsx
+│   │               └── styles.ts
+│   ├── shared/                   # (futuro) Componentes compartilhados
+│   └── ui/                       # (futuro) Componentes de UI
 ├── assets/                       # Imagens e recursos
-├── App.tsx                       # Ponto de entrada da aplicação
 ├── app.json                      # Configuração do Expo
-└── package.json                  # Dependências do projeto
+├── babel.config.js               # Configuração do Babel
+├── package.json                  # Dependências do projeto
+└── tsconfig.json                 # Configuração do TypeScript
 ```
 
 ## 🎯 Funcionalidades
@@ -105,11 +112,22 @@ O projeto está em desenvolvimento. Funcionalidades planejadas incluem:
 
 ## 📝 Licença
 
-Este projeto é privado.
+Este projeto está licenciado sob a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License** (CC BY-NC-SA 4.0).
+
+Isso significa que você pode:
+- ✅ **Estudar** e aprender com o código
+- ✅ **Modificar** e adaptar para seus próprios projetos
+- ✅ **Compartilhar** e redistribuir o código modificado
+
+Mas você **não pode**:
+- ❌ **Usar para fins comerciais** ou obter lucro direto com este código
+- ❌ **Remover os créditos** da licença original
+
+Para mais detalhes, consulte: [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## 👤 Autor
 
-Desenvolvido como projeto pessoal para gerenciamento de experiências de gaming.
+Itagiba Neto (K010TE)
 
 ---
 
