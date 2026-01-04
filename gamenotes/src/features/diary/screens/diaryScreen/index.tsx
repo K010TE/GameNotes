@@ -6,10 +6,13 @@ import EntryCard from "../../components/entryCard";
 import { useEntries } from "../../hooks/useEntries";
 import type { EntryInput } from "../../model/entry.types";
 import { styles } from "./styles";
+import PrimaryButton from "../../components/ui/primaryButton";
+import { useRouter } from "expo-router";
 
 export default function DiaryScreen() {
   const { entries, loading, addEntry } = useEntries();
   const [modalOpen, setModalOpen] = useState(false);
+  const router = useRouter();
 
   function openNew() {
     setModalOpen(true);
@@ -33,6 +36,7 @@ export default function DiaryScreen() {
           <View style={styles.emptyBox}>
             <Text style={styles.empty}>Nenhum registro ainda.</Text>
             <Text style={styles.tip}>Toque em “+ Novo” para adicionar o primeiro jogo.</Text>
+            <PrimaryButton title="Página Teste" onPress={() => router.push("/teste")} />
           </View>
         ) : (
           entries.map((e) => <EntryCard key={e.id} entry={e} />)
