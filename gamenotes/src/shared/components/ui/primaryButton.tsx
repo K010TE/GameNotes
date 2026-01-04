@@ -1,4 +1,4 @@
-// src/components/ui/PrimaryButton.tsx
+// src/shared/components/ui/PrimaryButton.tsx
 import React from "react";
 import { Pressable, Text, ActivityIndicator, StyleSheet, ViewStyle, TextStyle } from "react-native";
 
@@ -39,3 +39,4 @@ const styles = StyleSheet.create({
   buttonDisabled: { opacity: 0.6 },
   buttonText: { color: "#fff", fontWeight: "600" },
 });
+
