@@ -6,7 +6,7 @@ import EntryCard from "../../components/entryCard";
 import { useEntries } from "../../hooks/useEntries";
 import type { EntryInput } from "../../model/entry.types";
 import { styles } from "./styles";
-import PrimaryButton from "../../components/ui/primaryButton";
+import PrimaryButton from "@/shared/components/ui/primaryButton";
 import { useRouter } from "expo-router";
 
 export default function DiaryScreen() {
